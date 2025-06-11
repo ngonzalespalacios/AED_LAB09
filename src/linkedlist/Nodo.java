@@ -1,4 +1,4 @@
-package linkedlist;
+package LinkedList;
 
 public class Nodo<T> {
 	private T data;

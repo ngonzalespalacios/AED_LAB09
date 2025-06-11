@@ -1,4 +1,4 @@
-package linkedlist;
+package LinkedList;
 
 public interface TDAList<T>{
 	boolean isEmpty();

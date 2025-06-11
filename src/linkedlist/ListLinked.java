@@ -1,4 +1,4 @@
-package linkedlist;
+package LinkedList;
 
 public class ListLinked<T> implements TDAList<T>{
 	private Nodo<T> head;
