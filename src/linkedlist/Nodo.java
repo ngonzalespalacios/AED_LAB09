@@ -5,7 +5,7 @@ public class Nodo<T> {
     private Nodo<T> next;
 
     public Nodo(T data) {
-    	this(data, null);
+        this(data, null);
     }
 
     public Nodo(T data, Nodo<T> next) {

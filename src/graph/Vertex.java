@@ -1,32 +1,39 @@
 package graph;
-import java.util.LinkedList;
+import LinkedList.*;
+
 public class Vertex<E> {
     private E data;
-    private LinkedList<Vertex<E>> adjacentVertices;
+    protected ListLinked<Edge<E>> listAdj;
+    private boolean visited; 
 
     public Vertex(E data) {
         this.data = data;
-        this.adjacentVertices = new LinkedList<>();
+        this.listAdj = new ListLinked<Edge<E>>();
+        this.visited = false;
     }
 
     public E getData() {
         return data;
     }
 
-    public void setData(E data) {
-        this.data = data;
+    public boolean equals(Object o) {
+        if (o instanceof Vertex<?>) {
+            Vertex<E> v = (Vertex<E>) o;
+            return this.data.equals(v.data);
+        }
+        return false;
+    }
+    
+    public boolean isVisited() {
+        return visited;
     }
 
-    public LinkedList<Vertex<E>> getAdjacentVertices() {
-        return adjacentVertices;
+    public void setVisited(boolean visited) {
+        this.visited = visited;
     }
 
-    public void addAdjacentVertex(Vertex<E> vertex) {
-        adjacentVertices.add(vertex);
-    }
-
-    @Override
+@Override
     public String toString() {
-        return "Vertex{" + "data=" + data + '}';
+        return this.data + " --> " + this.listAdj.toString() + "\n";
     }
 }

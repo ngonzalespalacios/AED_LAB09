@@ -1,5 +1,7 @@
 package LinkedList;
 
+import graph.Vertex;
+
 public class ListLinked<T> implements TDAList<T>{
 	private Nodo<T> head;
 
@@ -110,5 +112,9 @@ public class ListLinked<T> implements TDAList<T>{
             s += aux.getData().toString();
         }
         return s;
+    }
+
+    public Nodo<T> getHead() {
+        return this.head;
     }
 }

@@ -1,8 +1,8 @@
 package graph;
 
 public class Edge<E> {
-    private Vertex<E> refDest;
-    private int weight;
+    Vertex<E> refDest;
+    int weight;
 
     public Edge(Vertex<E> refDest) {
         this(refDest, -1);
